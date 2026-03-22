@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launchpad Test App</title>
+    <meta
+      name="description"
+      content="A tiny static app for validating Launchpad deployments."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero-card">
+        <div class="badge-row">
+          <span class="badge">Launchpad Ready</span>
+          <span class="badge badge-muted">Static Test App</span>
+        </div>
+
+        <h1>Hi, this is a testing app.</h1>
+        <p class="lead">
+          This tiny frontend exists only to test the Launchpad import, build,
+          and preview flow from a real GitHub repository.
+        </p>
+
+        <div class="actions">
+          <button id="checkButton" class="primary-button" type="button">
+            Run health check
+          </button>
+          <a
+            class="secondary-link"
+            href="https://github.com/poolanithinreddy/Launchpad"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Launchpad
+          </a>
+        </div>
+
+        <div class="status-grid">
+          <article class="status-card">
+            <span class="status-label">Status</span>
+            <strong id="statusValue">Waiting</strong>
+          </article>
+          <article class="status-card">
+            <span class="status-label">Framework</span>
+            <strong>Static</strong>
+          </article>
+          <article class="status-card">
+            <span class="status-label">Deployed by</span>
+            <strong>Nithin Reddy Poola</strong>
+          </article>
+        </div>
+
+        <div class="log-panel" aria-live="polite">
+          <div class="log-header">
+            <span>Runtime output</span>
+            <span id="timestampValue">--:--:--</span>
+          </div>
+          <p id="logOutput" class="log-line">
+            Waiting for your first click. If you can see this in Launchpad, the
+            test app deployed correctly.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
